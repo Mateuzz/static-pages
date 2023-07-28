@@ -1,0 +1,731 @@
+/*-------------------  -----------  ----------------------*/
+   /*==================* Variables *====================*/
+/*-------------------  -----------  ----------------------*/
+
+:root {
+    --text-default: rgb(65, 64, 66);
+    --background-default: #fafafa;
+    --link-default: rgb(147, 113, 39);
+}
+
+
+/*-------------------  -----------  ----------------------*/
+   /*==================* Normalize *====================*/
+/*-------------------  -----------  ----------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input {
+    font-family: inherit;
+}
+
+img {
+}
+
+address, a {
+    font-style: none;
+}
+
+
+/*-------------------  -----------  ----------------------*/
+   /*==================* Fonts *====================*/
+/*-------------------  -----------  ----------------------*/
+
+@font-face {
+    font-family: 'Garnet';
+    src: local('Garnet Script Regular'), local('Garnet-Script-Regular'),
+        url('../fonts/GarnetScript-Regular.woff2') format('woff2'),
+        url('../fonts/GarnetScript-Regular.woff') format('woff'),
+        url('../fonts/GarnetScript-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'michromaregular';
+    src: url('../fonts/michroma-webfont.woff2') format('woff2'),
+         url('../fonts/michroma-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'zeitlight';
+    src: url('../fonts/zeit-light-webfont.woff2') format('woff2'),
+         url('../fonts/zeit-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/*-------------------  -----------  ----------------------*/
+   /*==================* Base *====================*/
+/*-------------------  -----------  ----------------------*/
+
+body {
+    background-color: var(--background-default);
+    font-family: zeitlight;
+    font-size: calc(0.6rem + 0.3vw);
+    color: var(--text-default);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #666666, #444444);
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: inset white 1px 0px 2px;
+}
+
+body::-webkit-scrollbar {
+    background: linear-gradient(45deg, black, #212121);
+    width: 18px;
+}
+
+.container {
+    width: 98%;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-default);
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: garnet;
+    font-size: 4em;
+    font-weight: 500;
+}
+
+h2 {
+    font-family: garnet;
+    font-size: 3em;
+    font-weight: 500;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+h4 {
+    font-size: 0.75em;
+    font-weight: normal;
+}
+
+/*-------------------  -----------  ----------------------*/
+   /*==================* Layouts *====================*/
+/*-------------------  -----------  ----------------------*/
+
+.ly-space-between {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ly-row-flex {
+    word-spacing: 0.2em;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    list-style-type: none; 
+    transition: all 0.3s ease-out;
+}
+
+.ly-flex-column {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.ly-black-button {
+    word-spacing: 0.3em;
+    display: inline-block;
+    font-weight: 100;
+    background-color: rgb(20, 20, 20);
+    color: rgb(230, 230, 230);
+    text-align: center;
+    padding: 0.5em 0.8em;
+}
+
+.ly-center {
+    flex-flow: row wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+.ly-floating-article {
+    justify-content: center;
+    margin: 40px auto 80px auto;
+}
+
+.ly-floating-article > * {
+    margin: 3em 5em;
+}
+
+.ly-floating-article > div:has(img) {
+    width: 37em;
+    height: 40em;
+    overflow: hidden;
+}
+
+.ly-floating-article img {
+    height: 100%;
+    max-width: initial;
+}
+
+.ly-nav {
+    font-size: 0.85em;
+    border: 2px solid black;
+    padding: 0 1em;
+}
+
+.ly-nav .ly-black-button {
+    font-size: 1.2em;
+}
+
+.ly-nav li {
+    margin: 0 0.3em;
+    display: block;
+    position: relative;
+}
+
+.ly-link-hover-bottom-border {
+    position: relative;
+}
+
+.ly-page-slide {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+    height: 40em;
+    overflow: hidden;
+    position: relative;
+}
+
+.ly-address-link a {
+    text-transform: none;
+    color: var(--link-default);
+    text-decoration: underline;
+}
+
+.ly-address-link a:hover {
+    color: rgb(110, 110, 110);
+}
+
+.ly-wide-text {
+    font-family: michromaregular;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+.ly-next-page-box {
+    height: 40vw;
+    width: 80%;
+    margin: 0 auto;
+    background: url("../images/egg.jpg") no-repeat top / cover, rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+    color: white;
+}
+
+.ly-next-page-box h2 {
+    font-size: 3.8em;
+    margin-bottom: 0.4em;
+}
+
+.ly-note-box-centered {
+    text-align: center;
+    max-width: 40em;
+    margin: 0 auto;
+    font-size: 1.1em;
+}
+
+
+/*-------------------  -----------  ----------------------*/
+   /*==================* Modules *====================*/
+/*-------------------  -----------  ----------------------*/
+.md-header-container {
+    margin-top: 10px;
+    letter-spacing: -1px;
+    position: fixed;
+    z-index: 100;
+    background-color: var(--background-default);
+}
+
+.md-main-page-slide {
+    background: url("../images/pizzas.jpg") no-repeat top / cover;
+}
+
+.md-main-page-slide-title {
+    position: absolute;
+    padding-top: 0.3em;
+    width: 8em;
+    text-align: center;
+    background-color: var(--background-default);
+    font-size: 5em;
+    bottom: 0;
+    font-family: garnet;
+}
+
+.md-note-box {
+    text-align: center;
+    font-size: 1.1em;
+    margin-top: 7em;
+    background-color: rgb(10, 10, 10);
+    color: white;
+    padding: 4em 10%;
+}
+
+.md-note-box a {
+    display: inline-block;
+    margin-top: 2em;
+    border: 2px solid white;
+    color: lightgray;
+    padding: 0.3em 1em;
+}
+
+.md-floating-article-card {
+    font-size: 1.1em;
+    border: 0.15rem solid black;
+    width: 450px;
+}
+
+.md-floating-article-card h2 {
+    padding-top: 0.3em;
+    padding-left: 0.3em;
+    border-bottom: 1px solid black;
+}
+
+.md-floating-article-card p {
+    margin: 1em;
+}
+
+.md-floating-article-card div {
+    margin: 1em;
+}
+
+.md-floating-article-card a {
+    margin-left: 0.2em;
+    padding: 6px 30px;
+}
+
+.md-featured-press {
+    text-align: center;
+    margin-bottom: 5em;
+}
+
+.md-featured-press h2 {
+    margin-bottom: 0.2em;
+}
+
+.md-featured-press > div > a {
+    height: 80px;
+    width: 20em;
+    margin: 0 2em;
+    flex: 1 auto;
+}
+
+.md-featured-press h3 {
+    border: 1px solid black;
+    padding: 0px 4px 3px 4px;
+}
+.md-next-page-reservation-box {
+    background: url("../images/egg.jpg") no-repeat top / cover, rgba(0, 0, 0, 0.4);
+}
+
+.md-footer-nav1 {
+    justify-content: center;
+    margin-top: 0.5em;
+}
+
+.md-footer-nav1 li {
+    margin: 0.8em 1.4em;
+}
+
+.md-footer-nav2 {
+    font-size: 0.7em;
+    padding: 1em 0.5em;
+}
+
+.md-footer-nav2 li {
+    margin: 0.6em;
+    letter-spacing: -0.15em;
+}
+
+
+/*==================* location/atlanta *====================*/
+
+.md-location-page-slide {
+    background: url("../images/pizza2.jpg") no-repeat top / cover;
+}
+
+.md-location-hours {
+    font-size: 1.2em;
+    align-items: baseline;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 55em;
+    margin-top: 4em;
+}
+
+.md-location-hours h2 {
+    margin-bottom: 0.5em;
+}
+
+.md-location-hours > div {
+    flex: 1  350px;
+    padding: 30px;
+}
+
+.md-location-hours p {
+    margin-bottom: 1.3em;
+    font-size: 0.8em;
+}
+
+.md-location-map {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    height: 50vw;
+}
+
+.md-location-map a {
+    position: absolute;
+    right: calc(50% - 7em);
+    bottom: 20%;
+    width: 14em;
+}
+
+.md-next-page-gallery-box {
+    background: url("../images/egg2.jpg") no-repeat top / cover, rgba(0, 0, 0, 0.4);
+}
+
+/*==================* Menu *====================*/
+.md-menu-container {
+    width: 80%;
+    max-width: 70em;
+    margin: 8em auto;
+}
+
+.md-menu-title h2 {
+    text-align: center;
+    font-size: 4.2em;
+    margin-bottom: 1em;
+}
+
+.md-menu-options {
+    margin-bottom: 3em;
+}
+
+.md-menu-options a {
+    margin: 0.5em;
+    padding: 10px 35px;
+}
+
+.md-menu-meals {
+    margin-top: 4em;
+    column-count: 2;
+    column-width: 30em;
+    column-rule: 2px solid black;
+}
+
+.md-menu-meals-category {
+    margin-top: 2em;
+    padding: 0em 2em;
+    break-inside: avoid;
+}
+
+.md-menu-meals-category:nth-of-type(even) .md-menu-meals-category-title {
+    border-top: 2px solid black;
+}
+
+.md-menu-meals-category-title {
+    border-bottom: 2px solid black;
+    padding: 1em;
+    font-size: 1.1em;
+}
+
+.md-menu-meals-category-title h2 {
+}
+
+.md-menu-meals-category-title p {
+    color: var(--link-default);
+    text-align: right;
+}
+
+.md-menu-meals-category-content b {
+    font-family: michromaregular;
+    font-size: 0.9em;
+    color: black;
+}
+
+.md-menu-meals-category-content {
+    font-size: 1.3em;
+    padding: 0 2em;
+}
+
+.md-menu-meals-category-content p {
+    margin-top: 1.6em;
+}
+
+.md-menu-page-footer {
+    margin-bottom: 20em;
+}
+
+/*==================* About *====================*/
+
+.md-about-note {
+    margin-top: 10em;
+}
+
+.md-about-main .md-floating-article-card {
+    text-align: center;
+}
+
+.md-about-main .md-floating-article-card strong {
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.md-about-main .md-floating-article-card p {
+    text-align: left;
+}
+
+.md-about-team-section {
+    padding: 0 5%;
+    text-align: center;
+    margin-bottom: 6em;
+    font-size: 1.7em;
+}
+
+.md-about-team-card {
+    font-size: 0.6em;
+    margin: 2em;
+}
+
+.md-about-team-card-img {
+    border: 2px solid black;
+}
+
+.md-about-team-card-img img {
+    height: calc(50em - 30vw);
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-out;
+}
+
+.md-about-team-card h3 {
+    text-align: center;
+    font-family: michromaregular;
+    padding: 8px 20px;
+    line-height: 1.2em;
+}
+
+.md-about-team-card h4 {
+    margin-top: 0.8em;
+    text-transform: none;
+}
+
+
+/*==================* Gallery *====================*/
+.md-main-gallery {
+    margin-top: 160px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.md-gallery-grid {
+    max-width: 70em;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    transition: all 0.8s ease-out;
+}
+
+.md-gallery-grid > a {
+}
+
+.md-gallery-grid img {
+    width: 100%;
+}
+
+
+/*==================* Private Dinning Atlanta *====================*/
+
+.md-dinning-cards {
+    margin-top: 2em;
+}
+
+.md-dinning-card {
+    width: calc(90em - 30vw);
+}
+
+.md-dinning-card h3 {
+    font-size: 2.0em;
+}
+
+.md-dinning-card div {
+    height: calc(90em - 30vw);
+}
+
+.md-dinning-card img {
+    height: 100%;
+    width: 100%;
+}
+
+.md-inquire-now {
+    width: 12em;
+    display: block;
+    margin: 10em auto;
+}
+
+
+/*-------------------  -----------  ----------------------*/
+   /*==================* States *====================*/
+/*-------------------  -----------  ----------------------*/
+a:hover {
+    transition: 0.3s all;
+}
+
+
+.ly-nav a:hover,
+.ly-nav a[data-link-active] {
+    color: rgb(220, 30, 30);
+}
+
+.ly-link-hover-bottom-border:hover::after,
+.ly-link-hover-bottom-border[data-link-active]::after {
+    content: "";
+    position: absolute;
+    left: calc(50% - 1.3em);
+    bottom: -0.5em;
+    width: 3em;
+    height: 2px;
+    background-color: black;
+    animation: link-hover-margin3em linear 0.35s;
+}
+
+.ly-black-button:hover {
+    background-color: rgb(220, 30, 30);
+}
+
+a[class~="ly-black-button"]:hover {
+    color: white;
+}
+
+.md-header-main-nav a:not([class~="ly-black-button"]):hover::after,
+.md-header-main-nav a:not(.ly-link-hover-bottom-border)[data-link-active]::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    width: 2em;
+    height: 2px;
+    background-color: black;
+    animation: link-hover-margin2em linear 0.35s;
+}
+
+.md-featured-press a:hover {
+    color: var(--text-default);
+}
+
+.md-note-box a:hover {
+    background-color: white;
+    color: var(--text-default); 
+}
+
+.md-footer-nav2 a:hover {
+    color: black;
+}
+
+
+
+/*-------------------  -----------  ----------------------*/
+   /*==================* Animations *====================*/
+/*-------------------  -----------  ----------------------*/
+@keyframes link-hover-margin2em {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 2em;
+    }
+}
+
+@keyframes link-hover-margin3em {
+    0% {
+        width: 0;
+        left: 50%;
+    }
+    100% {
+        width: 3em;
+        left: calc(50% - 1.3em);
+    }
+}
+
+/*==================*  Utility states *====================*/
+
+
+.st-overlay-card {
+    overflow: hidden;
+    position: relative;
+}
+
+.st-overlay-card > .st-overlay {
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+    position: absolute;
+    background-color: black;
+    transition: all 0.3s;
+}
+
+.st-overlay-card:hover > .st-overlay {
+    opacity: 0.8;
+    height: 100%;
+    transition: all 0.3s linear;
+}
+
+
+/*-------------------  -----------  ----------------------*/
+   /*==================* Media Query *====================*/
+/*-------------------  -----------  ----------------------*/
+
+@media screen and (max-width: 1350px) {
+    .md-about-team-section {
+        padding: 0;
+    }
+
+    .md-about-team-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        transition: all 0.3s linear;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .ly-floating-article > * {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .md-header-main-nav {
+        display: none;
+    }
+}
+

@@ -1,0 +1,394 @@
+@import url("fonts.css");
+
+/* ==== Normalize ===== */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+/* ==================== */
+
+
+
+
+/* ==== Variables ===== */
+body {
+    --light-background: #f6f6eb;
+    --normal-blue: #381fd1;
+    --light-blue: #785fe1;
+    --super-light-blue: #efefff;
+    --normal-white: #ffffff;
+    --dark-blue: #11284b;
+    --dark-grey: #4b4b4e;
+    --white-blue: #f3f2fc;
+}
+/* ==================== */
+
+
+
+
+/* ==== General ===== */
+body {
+    font-size: calc(0.9rem + 0.5vh);
+    font-family: "ArminGrotesk";
+    font-weight: 500;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+label {
+    display: block;
+}
+
+details {
+    cursor: pointer;
+}
+
+details summary {
+    margin-bottom: 20px;
+}
+
+details li {
+    margin-left: 20px;
+}
+/* ==================== */
+
+
+
+
+
+/* ==== Layouts ===== */
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.ly-flex-row-center {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.ly-flex-row-center a {
+    display: block;
+}
+
+.ly-flex-row-start {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    white-space: nowrap;
+}
+
+.ly-flex-row-start > * {
+    flex: 1 auto;
+}
+
+.ly-nav-col {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.ly-nav-col a {
+    display: block;
+}
+
+.wide-box {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ly-button {
+    padding: 15px 50px;
+    border-radius: 8px;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.ly-button-high {
+    border-radius: 5px;
+    padding: 30px 22px 30px 20px;
+    font-size: 1.2em;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.ly-button-high h4 {
+    font-size: 1.1em;
+}
+
+.ly-button-high p {
+    font-size: 0.75em;
+}
+
+.ly-card-padding {
+    padding: 25px 30px 80px 25px; 
+}
+
+
+/* ==================== */
+
+
+
+/* ==== Widgets===== */
+
+.form label {
+    margin-bottom: 10px;
+}
+
+.form input {
+    border-radius: 4px;
+    border: 3px solid lightgrey;
+}
+
+.card-common {
+    font-size: 1.4em;
+    border-radius: 5px;
+    color: var(--dark-blue);
+    font-family: "Roboto";
+}
+
+/* ==================== */
+
+
+
+/* ==== Colors ===== */
+.bg-light {
+    background-color: var(--light-background);
+    color: var(--dark-grey);
+}
+
+.bg-white {
+    color: var(--dark-blue);
+    background-color: var(--normal-white);
+}
+
+.bg-light-blue {
+    background-color: var(--super-light-blue);   
+}
+
+.bg-dark-blue {
+    background-color: var(--dark-blue);
+    color: white;
+}
+
+.link-blue {
+    color: var(--normal-blue);
+    font-weight: 600;
+}
+
+.link-white {
+    color: var(--normal-white);
+    font-weight: 500;
+}
+
+.link-white:hover {
+    text-decoration: underline;
+}
+
+.link-underline {
+    font-weight: 500;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.link-underline:hover {
+    color: var(--light-blue)
+}
+
+.link-dark {
+    color: var(--dark-grey);
+}
+
+.link-dark:hover,
+.link-dark:active {
+    color: var(--normal-blue);
+}
+
+.bg-button {
+    background-color: var(--normal-blue);
+    color: white;
+}
+
+.bg-button:hover {
+    background-color: var(--light-blue);
+    outline: none;
+}
+
+/* ==================== */
+
+
+
+
+
+/* ==== Page ===== */
+header {
+    margin-bottom: 60px;
+}
+
+header a {
+    padding: 7px 7px 4px 7px;
+    margin: 15px 20px;
+    border-radius: 6px;
+}
+
+body > header a:hover {
+    outline: 3px solid var(--normal-blue);
+}
+
+header .bg-button {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+main .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.main-aside {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.main-aside nav {
+    margin-top: 20px;
+}
+
+.main-aside li > * {
+    padding: 18px 15px;
+}
+
+.main-aside details[open] summary {
+    background: url("../images//chevron-up-regular-24.png") no-repeat right;
+    list-style-type: none;
+}
+
+.main-aside details:not([open]) summary {
+    background: url("../images//chevron-down-regular-24.png") no-repeat right;
+    list-style-type: none;
+}
+
+.main-aside .ly-button-high hgroup {
+    margin-bottom: 30px;
+}
+
+
+.main-article {
+    flex: 3.3;
+}
+
+.card-article {
+    padding: 10px 10px;
+    margin-bottom: 30px;
+}
+
+.card-article-header div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.card-article h2 {
+    font-size: 2.5em;
+}
+
+.card-article-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 2fr));
+    gap: 30px;
+}
+
+.library-cards > a {
+    padding: 25px 30px 80px 25px;
+    border: 1px solid lightgray;
+}
+
+.library-cards p {
+    font-family: "Roboto";
+    color: var(--normal-blue);
+    margin-bottom: 10px;
+    font-size: 0.8em;
+}
+
+.library-cards img {
+    border: 0.5px solid lightgrey;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.card-collection {
+    position: relative;
+}
+
+.card-collection img {
+    width: 100%;
+}
+
+.card-collection:hover {
+    transform: scale(1.02);
+}
+
+.card-collection h4 {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    color: #000021;
+}
+
+footer {
+    margin-top: 100px;
+    font-size: 1em;
+}
+
+footer .container > div:nth-of-type(1) {
+    font-size: 2em;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-nav {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.footer-nav > a {
+    padding: 10px 0;
+}
+
+.footer-end {
+    margin-top: 50px;
+}
+
+.footer-end > div:last-child {
+    text-align: right;
+}
+
+/* ==================== */
+
+@media screen and (max-width:750px) {
+    .main-aside {
+        margin-right: 0;
+    }
+}

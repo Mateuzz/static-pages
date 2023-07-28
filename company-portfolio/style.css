@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0e0e0e;
+}
+
+
+
+
+.text-article * {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #aaa;
+    line-height: 1.4em;
+}
+
+.text-article p {
+    margin-bottom: 25px;
+}
+
+.text-article a {
+    text-decoration: none;
+}
+
+.text-article a:hover {
+    color: white;
+    transition: 0.3s color;
+}
+
+.text-article h1, 
+.text-article h2 {
+    margin: 15px 0;
+    color: white;
+    font-size: 3.4vw;
+    font-weight: normal;
+    line-height: initial;
+}
+
+.text-name {
+    color: white;
+    font-size: 1.2em;
+}
+
+
+
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0px 30px;
+}
+
+
+.section-grey {
+    background-color: #222230;
+    height: 100%;
+}
+
+.box-flow > div {
+    display: inline-block;
+}
+
+
+
+
+
+
+
+.container * {
+}
+
+.topbar-section {
+    height: 50px;
+}
+
+.topbar-section > div:nth-child(odd) {
+    width: 15%;
+    float: left;
+}
+
+.navigation-main {
+    width: 70%;
+    float: left;
+}
+
+.navigation-main > div {
+    padding: 15px 0;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.navigation-main * {
+    text-align: center;
+}
+
+.box-flow-item-last {
+    text-align: end;
+    float: left;
+}
+
+
+.banner {
+    clear: both;
+    max-width: 600px;
+}
+
+.corporations-section > img {
+    height: 22px;
+    margin: 20px 43px;
+}
+
+header {
+    margin-bottom: 70px;
+}
+
+
+
+
+
+
+.main-section {
+    padding: 50px 0;
+}
+
+.main-section-half {
+    vertical-align: top;
+    width: 49%;
+}
+
+.main-section-half div {
+    width: 90%;
+}
+
+.main-section-half img {
+    width: 100%;
+}
+
+.section-grey .main-section h2 {
+    margin-top: -20px;
+}
+
+
+
+
+
+.footer-section > div {
+    width: 48%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+.footer-icon {
+    display: inline-block;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    line-height: 30px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.footer-icon:hover {
+    background-color: black;
+    color: white;
+    transition: 0.3s all;
+}
+
+.fa-github {
+    font-size: 25px;
+}
+
+
+
+.button {
+    background-color: #ffff55;
+    border-radius: 4px;
+    padding: 15px;
+    color: black;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #ffdd44;
+    cursor: pointer;
+    transform: scale(102%);
+}
+
+
+
+
+
+@media only screen and (max-width:850px) {
+    .main-section-half,
+    .main-section-half > div {
+        width: 100%;
+    }
+
+    .main-section:nth-of-type(1) > .main-section-half {
+        margin-bottom: 30px;
+    }
+
+    .navigation-main,
+    .navigation-main * {
+        display: none;
+    }
+
+}

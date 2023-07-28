@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Style */
+
+body {
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Ubuntu Regular';
+    line-height: 1.3;
+}
+
+a {
+    text-decoration: none;
+    color: #4C5FD5;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: calc(2em + 4vw);
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 12px;
+}
+
+input {
+    width: 100%;
+    height: 70px;
+    border: 2px solid black;
+    padding: 20px;
+    font-size: 1.4em;
+}
+
+input::-webkit-search-decoration ,
+input::-webkit-search-cancel-button ,
+input::-webkit-search-results-button ,
+input::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+input:focus {
+    border: 2px solid blue;
+    outline: none;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+address {
+    font-style: none;
+}
+
+
+
+
+.nav-menu {
+    background-color: black;
+    color: white;
+}
+
+.nav-menu a {
+    color: white;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+/* Utilies */
+
+.rounded-button {
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+.center-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+/* Help Page */
+
+.bx {
+    position: relative;
+    top: 8px;
+    right: 3px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.58em;
+}
+
+nav div {
+    padding: 30px 120px;
+    flex-grow: 1;
+    white-space: nowrap;
+}
+
+.nav-help a {
+    padding: 0 16px;
+}
+
+.nav-help a:nth-child(1):hover {
+    text-decoration: none;
+    color: #bbb;
+    transition: all 0.3s;
+}
+
+.nav-help a:nth-child(1) {
+    border-right: 2px solid white;
+    font-weight: bold;
+}
+
+.nav-login {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-login a:hover {
+    text-decoration: none;
+}
+
+.nav-login a:nth-child(1) {
+    border: 1px solid white;
+    margin-right: 9px;
+}
+
+.nav-login a:nth-child(2) {
+    background-color: #6053ee;
+}
+
+.nav-login a:nth-child(2):hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s all;
+}
+
+
+
+
+
+
+/* Search  */
+
+.main-search {
+    background-color: #dadbf1;
+    height: 430px;
+    margin-bottom: 140px;
+}
+
+.main-search div {
+    text-align: center;
+}
+
+.main-search form {
+    white-space: nowrap;
+}
+
+.main-search input {
+    max-width: 800px;
+}
+
+.main-search input:focus + i {
+    color: blue;
+}
+
+.bx-right-arrow-alt {
+    margin-left: -50px;
+}
+
+
+
+/* Cards */
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 70px 30px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.card {
+    padding: 20px;
+    display: flow-root;
+}
+
+.card div {
+    height: 100%;
+}
+
+.card > div:nth-child(1) {
+    width: 110px;
+    margin-right: 30px;
+    float: left;
+}
+
+.card * {
+    font-size: 1.3em;
+}
+
+
+
+/* footer */
+
+footer {
+    margin-top: 100px;
+    min-height: 430px;
+    font-size: 1.3em;
+}
+
+footer .container {
+    min-height: 400px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+footer .container > div {
+    padding: 30px;
+}
+
+footer a {
+    display: block;
+}
+
+footer div:last-child {
+    align-self: flex-end;
+}
+
+footer i {
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width:1000px) {
+    nav {
+        flex-direction: column;
+    }
+}

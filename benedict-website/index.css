@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #fcfafa;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.background-content {
+    background-color: #570000;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.2));
+    color: #eee;
+    text-align: center;
+}
+
+header {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+header img {
+    margin: 20px 0 -10px 0px;
+}
+
+.navigation-menu ul {
+    padding-bottom: 40px;
+}
+
+.navigation-menu li {
+    display: inline-block;
+}
+
+.navigation-menu a {
+    padding: 25px 20px 0 20px;
+    display: inline-block;
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.navigation-menu a:hover {
+    color: white;
+}
+
+.drop-menu {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    background-color: #570000;
+    padding-bottom: 15px;
+}
+
+.drop-menu a {
+    display: block;
+    text-align: left;
+}
+
+.navigation-menu div:hover .drop-menu, .drop-menu:hover {
+    display: block;
+}
+
+main { 
+    font-family: Arial;
+    margin-top: 120px;
+    color: #572f2f;
+}
+
+.main-content > div {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.left-content {
+    width: 40%;
+    float: left;
+}
+
+.right-content {
+    vertical-align: top;
+    float: right;
+    width: 58%;
+}
+
+.right-content > div {
+    margin-left: 30px;
+}
+
+.pictures-list > figure > figcaption {
+    margin: 25px 0 55px 0;
+}
+
+.pictures-list > figure > img {
+    width: 100%;
+}
+
+#legal {
+
+}
+
+main h1 {
+    font-size: 22px;
+}
+
+main blockquote {
+    padding: 40px;
+    margin-bottom: 20px;
+    font-style: italic;
+    border-left: 1px solid #222;
+}
+
+main h2 {
+    font-size: 1rem;
+    color: grey;
+    font-weight: 100;
+}
+
+main p, main h2, main blockquote {
+    margin-bottom: 20px;
+    font-weight: 100;
+    line-height: 1.7em;
+    font-size: 0.9em;
+}
+
+main figcaption {
+    font-size: 0.8em;
+}
+
+footer {
+    margin-top: 60px;
+    clear: both;
+}
+
+.footer-links {
+    background-color: #c4996c;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.3));
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer-icons {
+    max-width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer-icon {
+    display: inline-block;
+    border-radius: 100%;
+    border: 2px solid black;
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+}
+
+.footer-icon:hover {
+    color: black;
+    background-color: white;
+    transition: all 0.15s;
+}
+
+.footer-info {
+    background-color: #570000;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5));
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 0.9em;
+}
+
+.footer-info p {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width:700px) {
+    .left-content,
+    .right-content {
+        display: block;
+        width: 100%;
+    }
+
+    .navigation-menu {
+        display: none;
+    }
+
+    header img {
+        margin: 20px 0 20px 0px;
+    }
+
+    .right-content > div {
+        margin-left: 0;
+    }
+}

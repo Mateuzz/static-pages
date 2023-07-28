@@ -1,0 +1,69 @@
+layout
+
+header flex
+    link azul escuro
+
+main
+    dois artigos grid
+    1 - altura x
+    2 - altura y
+
+footer
+    3 flex row
+
+aside
+    form
+    nav
+    widget
+    link cinza
+        :hover e active azul claro
+
+cores
+    link -> azul claro
+    background button -> azul escuro
+        color: white
+        hover -> azul claro
+
+tipografy
+    nav li -> bold
+    link : no underline
+    button no outline
+
+
+
+media
+    logo azul
+    logos de empresas
+    3 imagens de pinturas legais
+
+    footer logo azul maior de outra cor
+
+
+
+
+colors + bg-color
+    bg-yellow
+
+    nav-links (bg-yellow)
+        color grey
+        link blue
+        link:hover outline
+
+    nav-inside
+
+    bg-light
+        color grey
+        link:hover white
+    bg-dark-blue
+        color white
+        link:hover underline
+    color-button
+
+layout
+    button-layout
+
+    cards-list
+        card
+    
+    ly-flex-row-center
+    ly-nav-col

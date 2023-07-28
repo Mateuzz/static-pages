@@ -1,0 +1,79 @@
+/* === Roboto === */
+
+@font-face {
+    src: url("../fonts/roboto/Roboto.woff") format("woff");
+    font-family: "Roboto";
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    src: url("../fonts/roboto/RobotoRegular.woff") format("woff");
+    font-family: "Roboto";
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    src: url("../fonts/roboto/RobotoBold.woff") format("woff");
+    font-family: "Roboto";
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    src: url("../fonts/roboto/RobotoItalic.woff") format("woff");
+    font-family: "Roboto";
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    src: url("../fonts/roboto/RobotoLight.woff") format("woff");
+    font-family: "Roboto";
+    font-weight: lighter;
+    font-style: normal;
+}
+
+
+/* === Armin Grotesk === */
+
+@font-face {
+    src: url("../fonts/armin/ArminGrotesk.woff2") format("woff2"),
+             url("../fonts/armin//ArminGrotesk.woff") format("woff");
+    font-family: "ArminGrotesk";
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    src: url("../fonts/armin/ArminGroteskItalic.woff2") format("woff2"),
+             url("../fonts/armin//ArminGroteskItalic.woff") format("woff");
+    font-family: "ArminGrotesk";
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    src: url("../fonts/armin/ArminGroteskBlack.woff2") format("woff2"),
+             url("../fonts/armin//ArminGroteskBlack.woff") format("woff");
+    font-family: "ArminGrotesk";
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    src: url("../fonts/armin/ArminGroteskThin.woff2") format("woff2"),
+             url("../fonts/armin//ArminGroteskThin.woff") format("woff");
+    font-family: "ArminGrotesk";
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    src: url("../fonts/armin/ArminGroteskRegular.woff2") format("woff2"),
+         url("../fonts/armin//ArminGroteskRegular.woff") format("woff");
+    font-family: "ArminGrotesk";
+    font-weight: 500;
+    font-style: normal;
+}

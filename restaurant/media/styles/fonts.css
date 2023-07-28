@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Garnet';
+    src: local('Garnet Script Regular'), local('Garnet-Script-Regular'),
+        url('../fonts/GarnetScript-Regular.woff2') format('woff2'),
+        url('../fonts/GarnetScript-Regular.woff') format('woff'),
+        url('../fonts/GarnetScript-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'michromaregular';
+    src: url('../fonts/michroma-webfont.woff2') format('woff2'),
+         url('../fonts/michroma-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'zeitlight';
+    src: url('../fonts/zeit-light-webfont.woff2') format('woff2'),
+         url('../fonts/zeit-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
